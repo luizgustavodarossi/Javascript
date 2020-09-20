@@ -1,0 +1,35 @@
+body{
+    background: #72b1d6;
+    font: normal 15pt Arial;
+}
+header{
+    color: #ffffff;
+    text-align: center;
+}
+section{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px #0000007a;
+}
+div{
+    text-align: center;
+}
+img#imagem{
+    width: 250px;
+    height: 250px;
+    padding: 12px;
+    border-radius: 50%;
+    transition: 1s;
+}
+img:hover{
+    box-shadow: 1px 1px 2px #00000034;
+    transition: 1.2s;
+}
+footer{
+    text-align: center;
+    font-style: italic;
+    color: #ffffff;
+}

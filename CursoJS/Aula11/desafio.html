@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Guanabara</title>
+    <style>
+        body{
+            background-color: rgb(230, 230, 230);
+            font: normal 9pt Arial;
+            height: 100%;
+            width: 100%;
+        }
+        section{
+            width: 200px;
+            height: 200px;
+            margin: 10% auto;
+            background-color: rgb(189, 190, 192);
+            padding: 10px;
+            text-align: left;
+
+            border: 2px solid rgb(107, 107, 107);
+            border-radius: 10px;
+        }
+        h1{
+            color: white;
+            margin: 10px;
+            text-align: center;
+        }
+        p{
+            font-size: 9pt;
+        }
+        input#pais{
+            width: 50%;
+            margin: 5px;
+            cursor:text;
+            border: 2px solid #000000c4;
+            border-radius: 5px;
+        }
+        input#veri{
+            width: auto;
+            border-radius: 5px;
+            appearance: push-button;
+            box-sizing: border-box;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Nacionalidade</h1>
+        <p>Você é natural do :</p>
+        <input type="text" id="pais" onchange="nacionalidade()">
+        <input type="button" value="Verificar" id="veri" onclick="nacionalidade()">
+        <div id="resposta"></div>
+    </section>
+    <script>
+        function nacionalidade(){
+            let paises = window.document.querySelector('input#pais')
+            let res = window.document.querySelector('div#resposta')
+            if((paises.value).toLowerCase() == 'brasil'){
+                res.innerHTML = `<p>Você é <strong>BRASILEIRO</strong></p>`
+            }else{
+                res.innerHTML = `<p>Você é estrangeiro</p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>
